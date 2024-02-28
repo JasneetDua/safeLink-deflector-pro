@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "@lwc/module-resolver": "^6.2.0",
+    "lwc": "^6.2.0",
+    "lwc-webpack-plugin": "^3.0.5",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
+  },
+  "scripts": {
+    "build": "npx webpack build"
+  }
+}
