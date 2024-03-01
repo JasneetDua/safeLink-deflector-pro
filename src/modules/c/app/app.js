@@ -28,14 +28,14 @@ export default class App extends LightningElement {
             const result = await chrome.storage.sync.get(['bypassHosts']);
             const bypassHosts = result.bypassHosts || {};
             const hostname = new URL(sourceHref).hostname;
-            if (bypassHosts.hasOwnProperty(hostname)) {
-                // Bypass Microsoft SafeLink and navigate to the original link
-                window.open(targetHref, '_self');
-            } 
-            else {
-                // Redirect to the SafeLink original URL
-                window.open(sourceHref, '_self');
-            }
+            // if (bypassHosts.hasOwnProperty(hostname)) {
+            //     // Bypass Microsoft SafeLink and navigate to the original link
+            //     window.open(targetHref, '_self');
+            // } 
+            // else {
+            //     // Redirect to the SafeLink original URL
+            //     window.open(sourceHref, '_self');
+            // }
         } else {
             // If sourceHref is not available, handle the situation accordingly
             console.error('sourceHref parameter is missing.');
