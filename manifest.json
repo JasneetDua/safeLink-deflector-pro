@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "SafeLink Deflector Pro",
+  "version": "0.0.0.1",
+  "description": "Bypass Microsoft SafeLinks and navigate directly to URLs.",
+  "author": "Jasneet Dua (jasneetdua96@gmail.com)",
+  "icons": {
+    "16": "./images/icons/icon-16.png",
+    "32": "images/icons/icon-32.png",
+    "48": "images/icons/icon-48.png",
+    "128": "images/icons/icon-128.png"
+},
+  "background": {
+    "service_worker": "service_worker.js",
+    "type": "module"
+  },
+  "permissions": [
+    "activeTab", 
+    "scripting",
+    "declarativeNetRequest",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.safelinks.protection.outlook.com/*"
+  ],
+  "options_ui": {
+    "page": "pages/option/option.html",
+    "open_in_tab": true
+  },
+  "action": {
+    "default_icon": "images/icons/icon-16.png",
+    "default_title": "SafeLink Deflector Pro - Decypher whitelist domains urls"
+  }
+}

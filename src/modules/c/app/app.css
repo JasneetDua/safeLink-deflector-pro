@@ -1,0 +1,17 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.app-container__body {
+    flex-grow: 1;
+}
+
+.action {
+    display: flex;
+    justify-content: center;
+}
+
+.action__item {
+    padding: 14px;
+}
