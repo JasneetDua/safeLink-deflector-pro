@@ -5,9 +5,8 @@ chrome.runtime.onInstalled.addListener(function () {
 });
 
 
-chrome.action.onClicked.addListener((tab) => {
-  chrome.scripting.executeScript({
-    target: { tabId: tab.id },
-    files: ['content.js']
-  });
+chrome.action.onClicked.addListener(async (tab) => {
+  if (!tab.url.startsWith('chrome://')) {
+      await chrome.scripting.executeScript({ target: { tabId: tab.id }, files: ['content.js'] });
+  }
 });
