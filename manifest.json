@@ -9,13 +9,13 @@
     "32": "images/icons/icon-32.png",
     "48": "images/icons/icon-48.png",
     "128": "images/icons/icon-128.png"
-},
+  },
   "background": {
     "service_worker": "service_worker.js",
     "type": "module"
   },
   "permissions": [
-    "activeTab", 
+    "activeTab",
     "scripting",
     "declarativeNetRequest",
     "storage"
@@ -30,5 +30,15 @@
   "action": {
     "default_icon": "images/icons/icon-16.png",
     "default_title": "SafeLink Deflector Pro - Decypher whitelist domains urls"
-  }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "/pages/app/app.html"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
 }
