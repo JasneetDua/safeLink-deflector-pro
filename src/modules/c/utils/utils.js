@@ -20,7 +20,7 @@ const getNewNetRequestRules = async () => {
         },
         "condition": {
             "excludedInitiatorDomains": [extensionId],
-            "regexFilter": "^https://([a-zA-Z0-9\.]*).safelinks.protection.outlook.com(.*)",
+            "regexFilter": "^https://([a-zA-Z0-9.]*).safelinks.protection.outlook.com(.*)",
             "resourceTypes": [
                 "main_frame"
             ]
